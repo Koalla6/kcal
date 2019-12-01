@@ -12,13 +12,13 @@ import java.util.List;
 @Builder
 
 @Entity
-@Table (name = "products")
+//@Table (name = "products")
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+  //  @Column (name = "id")
     private Long id;
-    @Column (name = "name")
+    //@Column (name = "name")
     private String name;
 
     @OneToMany(mappedBy = "products")

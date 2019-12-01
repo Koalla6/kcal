@@ -11,21 +11,21 @@ import javax.persistence.*;
 @Builder
 
 @Entity
-@Table (name = "vegetables")
+//@Table (name = "vegetables")
 public class Vegetables {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+  //  @Column (name = "id")
     private Long id;
-    @Column (name = "name")
+    //@Column (name = "name")
     private String name;
-    @Column (name = "proteins")
+    //@Column (name = "proteins")
     private Double proteins;
-    @Column (name = "fats")
+    //@Column (name = "fats")
     private Double fats;
-    @Column (name = "carbohydrates")
+    //@Column (name = "carbohydrates")
     private Double carbohydrates;
-    @Column (name = "kcal")
+    //@Column (name = "kcal")
     private Double kcal;
 
     @ManyToOne

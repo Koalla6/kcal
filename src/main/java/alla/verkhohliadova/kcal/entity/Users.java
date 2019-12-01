@@ -11,18 +11,18 @@ import javax.persistence.*;
 @Builder
 
 @Entity
-@Table (name = "users")
+//@Table (name = "users")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+  //  @Column (name = "id")
     private Long id;
-    @Column (name = "name")
+    //@Column (name = "name")
     private String name;
-    @Column (name = "phone number")
+    //@Column (name = "phone number")
     private String phoneNumber;
-    @Column (name = "login")
+    //@Column (name = "login")
     private String login;
-    @Column (name = "password")
+    //@Column (name = "password")
     private String password;
 }
