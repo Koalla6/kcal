@@ -27,7 +27,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("SpringBoot-Swagger-API")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("roman.pidkostelnyi.dealer.controller"))
+                .apis(RequestHandlerSelectors.basePackage("alla.verkhohliadova.kcal.controller"))
                 .build()
                 .securitySchemes(Collections.singletonList(apiKey()))
                 .securityContexts(Collections.singletonList(securityContext()))
