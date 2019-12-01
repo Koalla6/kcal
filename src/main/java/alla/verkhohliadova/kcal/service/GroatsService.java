@@ -3,6 +3,7 @@ package alla.verkhohliadova.kcal.service;
 import alla.verkhohliadova.kcal.dto.request.GroatsRequest;
 import alla.verkhohliadova.kcal.dto.response.GroatsResponse;
 import alla.verkhohliadova.kcal.entity.Groats;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.repository.GroatsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,6 +50,10 @@ public class GroatsService {
         groatsResponse.setFats(groats.getFats());
         groatsResponse.setCarbohydrates(groats.getCarbohydrates());
         groatsResponse.setKcal(groats.getKcal());
+        Products products = groats.getProducts();
+        if (products!= null){
+            groatsResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return groatsResponse;
     }
 

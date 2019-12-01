@@ -30,7 +30,7 @@ public class ProductsService {
 
     public List<ProductsResponse> findAll(){
         List<Products> all = productsRepository.findAll();
-        return all.stream().map(this::productsToProductsResponse).collect(Collectors.toList());
+        return all.stream().map(ProductsService::productsToProductsResponse).collect(Collectors.toList());
     }
 
     public Products findOne(Long id){
@@ -38,7 +38,7 @@ public class ProductsService {
                 .orElseThrow(()-> new IllegalArgumentException("Products with id " + id+ " not exists"));
     }
 
-    private ProductsResponse productsToProductsResponse (Products products){
+    public static ProductsResponse productsToProductsResponse (Products products){
         ProductsResponse productsResponse = new ProductsResponse();
         productsResponse.setId(products.getId());
         productsResponse.setName(products.getName());

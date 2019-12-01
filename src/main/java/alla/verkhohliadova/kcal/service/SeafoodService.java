@@ -2,6 +2,7 @@ package alla.verkhohliadova.kcal.service;
 
 import alla.verkhohliadova.kcal.dto.request.SeafoodRequest;
 import alla.verkhohliadova.kcal.dto.response.SeafoodResponse;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.entity.Seafood;
 import alla.verkhohliadova.kcal.repository.SeafoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,10 @@ public class SeafoodService {
         seafoodResponse.setFats(seafood.getFats());
         seafoodResponse.setCarbohydrates(seafood.getCarbohydrates());
         seafoodResponse.setKcal(seafood.getKcal());
+        Products products = seafood.getProducts();
+        if (products!= null){
+            seafoodResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return seafoodResponse;
     }
 

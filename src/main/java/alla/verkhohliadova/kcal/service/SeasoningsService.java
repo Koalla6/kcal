@@ -2,6 +2,7 @@ package alla.verkhohliadova.kcal.service;
 
 import alla.verkhohliadova.kcal.dto.request.SeasoningsRequest;
 import alla.verkhohliadova.kcal.dto.response.SeasoningsResponse;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.entity.Seasonings;
 import alla.verkhohliadova.kcal.repository.SeasoningsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,10 @@ public class SeasoningsService {
         seasoningsResponse.setFats(seasonings.getFats());
         seasoningsResponse.setCarbohydrates(seasonings.getCarbohydrates());
         seasoningsResponse.setKcal(seasonings.getKcal());
+        Products products = seasonings.getProducts();
+        if (products!= null){
+            seasoningsResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return seasoningsResponse;
     }
 

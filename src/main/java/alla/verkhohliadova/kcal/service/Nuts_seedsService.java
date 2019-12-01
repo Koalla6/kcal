@@ -3,6 +3,7 @@ package alla.verkhohliadova.kcal.service;
 import alla.verkhohliadova.kcal.dto.request.Nuts_seedsRequest;
 import alla.verkhohliadova.kcal.dto.response.Nuts_seedsResponse;
 import alla.verkhohliadova.kcal.entity.Nuts_seeds;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.repository.Nuts_seedsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,6 +50,10 @@ public class Nuts_seedsService {
         nuts_seedsResponse.setFats(nuts_seeds.getFats());
         nuts_seedsResponse.setCarbohydrates(nuts_seeds.getCarbohydrates());
         nuts_seedsResponse.setKcal(nuts_seeds.getKcal());
+        Products products = nuts_seeds.getProducts();
+        if (products!= null){
+            nuts_seedsResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return nuts_seedsResponse;
     }
 

@@ -3,6 +3,7 @@ package alla.verkhohliadova.kcal.service;
 import alla.verkhohliadova.kcal.dto.request.JamsRequest;
 import alla.verkhohliadova.kcal.dto.response.JamsResponse;
 import alla.verkhohliadova.kcal.entity.Jams;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.repository.JamsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,6 +50,10 @@ public class JamsService {
         jamsResponse.setFats(jams.getFats());
         jamsResponse.setCarbohydrates(jams.getCarbohydrates());
         jamsResponse.setKcal(jams.getKcal());
+        Products products = jams.getProducts();
+        if (products!= null){
+            jamsResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return jamsResponse;
     }
 

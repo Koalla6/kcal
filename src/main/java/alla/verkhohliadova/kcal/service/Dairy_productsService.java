@@ -3,6 +3,7 @@ package alla.verkhohliadova.kcal.service;
 import alla.verkhohliadova.kcal.dto.request.Dairy_productsRequest;
 import alla.verkhohliadova.kcal.dto.response.Dairy_productsResponse;
 import alla.verkhohliadova.kcal.entity.Dairy_products;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.repository.Dairy_productsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,6 +49,10 @@ public class Dairy_productsService {
         dairy_productsResponse.setFats(dairy_products.getFats());
         dairy_productsResponse.setCarbohydrates(dairy_products.getCarbohydrates());
         dairy_productsResponse.setKcal(dairy_products.getKcal());
+        Products products = dairy_products.getProducts();
+        if (products!= null){
+            dairy_productsResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return dairy_productsResponse;
     }
 

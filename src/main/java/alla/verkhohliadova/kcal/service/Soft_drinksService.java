@@ -2,6 +2,7 @@ package alla.verkhohliadova.kcal.service;
 
 import alla.verkhohliadova.kcal.dto.request.Soft_drinksRequest;
 import alla.verkhohliadova.kcal.dto.response.Soft_drinksResponse;
+import alla.verkhohliadova.kcal.entity.Products;
 import alla.verkhohliadova.kcal.entity.Soft_drinks;
 import alla.verkhohliadova.kcal.repository.Soft_drinksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,10 @@ public class Soft_drinksService {
         soft_drinksResponse.setFats(soft_drinks.getFats());
         soft_drinksResponse.setCarbohydrates(soft_drinks.getCarbohydrates());
         soft_drinksResponse.setKcal(soft_drinks.getKcal());
+        Products products = soft_drinks.getProducts();
+        if (products!= null){
+            soft_drinksResponse.setProductsResponse(ProductsService.productsToProductsResponse(products));
+        }
         return soft_drinksResponse;
     }
 
