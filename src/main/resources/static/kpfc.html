@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KPFC</title>
+    <link rel="stylesheet" type="text/css" href="css/KPFC_CSS.css">
+</head>
+<body>
+<div id="main">
+    <center>
+        <div id="menu">
+            <ul class="menu">
+                <li> <a class="list" href="imt.html"> Body mass index </a> </li>
+                <li> <a class="list" href="kpfc.html" > KPFC index </a></li>
+                <li> <a class="list" href="kcal.html"> Calories in foods </a></li>
+            </ul>
+        </div>
+    </center>
+
+    <p id="p_1">Calculate your Calories Proteins Fats Carbohydrates Index</p>
+
+    <p id="p_2">
+        The main sources of proteins: meat, fish, seafood, hard and sour milk cheese, eggs, legumes.
+
+        Sources of fats: vegetable and animal oils, nuts, fatty fish (salmon, trout).
+
+        Carbohydrates to maintain vitality and normal body functions should be greatest.
+        They are found in cereals, pasta, potatoes, fruits, honey.
+
+        The sweets also contain a large amount of carbohydrates, but others - simple.
+        Such carbohydrates are quickly absorbed by the body and are deposited by
+        additional inches on the waist, hips and abdomen.
+    </p>
+
+
+    <div id="imt_parameters">
+        <center>
+            <form name="parameters" id="param">
+                <table>
+                    <tr>
+                        <td class="numbers1"> Height (centimeters) </td>
+                        <td class="include1">
+                            <input id ="height_range" type="range" name="h" min="140" max="220" oninput="func_h_range()">
+                        </td>
+                        <td class="include1">
+                            <input id="height_number" type="number" name="height" min="140" max="220">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="numbers1"  style="margin-top: 35px"> Weight (kilograms) </td>
+                        <td class="include1">
+                            <input  id="weight_range" type="range" name="w" min="40" max="200" oninput="func_w_range()">
+                        </td>
+                        <td class="include1">
+                            <input id="weight_number" style="padding: 5px; font-size: 15px"
+                                   type="number" name="weight" min="40" max="200">
+                        </td>
+                    </tr>
+                    <tr>
+                        <center>
+                            <td class="include2" >
+                                <input id="button" type="button" name="result"  value="Result" onclick="func1()">
+                            </td>
+                        </center>
+                    </tr>
+
+                    <tr>
+                        <td class="numbers2">
+                            <output id="result" type="number"/>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </center>
+        <div class="include2">
+            <div id="text_result"></div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<script>
+    function func_h_range() {
+        var H = parseInt(parameters.h.value);
+        height_number.value = H;
+        parameters.height.value = parameters.h.value;
+    }
+
+    function func_w_range() {
+        var W = parseInt(parameters.w.value);
+        weight_number.value = W;
+        parameters.weight.value = parameters.w.value;
+    }
+    function func1() {
+        var H = parseInt(parameters.height.value);
+        var W = parseInt(parameters.weight.value);
+        var R;
+
+        R = W/(H/100*H/100);
+        result.value = R;
+
+        if (R<18.5){
+            document.getElementById('text_result').innerHTML = 'Your current body mass index is less than normal.\n' +
+                'This means that you should in no way lose weight.';
+        }
+
+        if ( R > 18.5 && R < 25){
+            document.getElementById('text_result').innerHTML = 'Congratulations, you have a normal weight.';
+        }
+
+        if (R > 25) {
+            document.getElementById('text_result').innerHTML = 'Your weight is well above normal.\n' +
+                'We advise you to consult your doctor about possible health risks.';
+        }
+
+
+        else {
+            document.getElementById('text_result').innerHTML = 'Try to input your parameters one more time'
+        }
+
+    }
+
+</div>
+
+</body>
+</html>

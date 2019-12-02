@@ -1,0 +1,43 @@
+body {
+    background-color: palegreen;
+}
+
+#main {
+    width: 100%;
+}
+
+#menu {
+    width: 100%;
+    z-index: 3;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    background-color: lightgreen;
+    border: 1px groove seagreen;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 50px;
+    box-shadow: 2px 2px 5px darkgreen;
+    font-family: Calibri;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.menu li:hover {
+    background-color: limegreen;
+    font-size: 50px;
+    border: 2px groove darkgreen;
+    box-shadow: 3px 3px 6px black;
+}
+
+.list {
+    text-decoration: none;
+    color: midnightblue;
+}
