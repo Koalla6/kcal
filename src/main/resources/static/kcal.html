@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Calories</title>
-    <link rel="stylesheet" type="text/css" href="css/IMT_CSS.css">
+    <link rel="stylesheet" type="text/css" href="css/KCAL_CSS.css">
+    <script src="js/kcal.js"></script>
 </head>
 <body>
 <div id="main">
@@ -11,13 +12,2711 @@
     <center>
         <div id="menu">
             <ul class="menu">
-                <li> <a class="list" href="imt.html"> Body mass index </a> </li>
-                <li> <a class="list" href="kpfc.html" > KPFC index </a></li>
-                <li> <a class="list" href="kcal.html"> Calories in foods </a></li>
+                <li><a class="list" href="imt.html"> Індекс маси тіла </a></li>
+                <li><a class="list" href="kpfc.html"> Норми КБЖВ </a></li>
+                <li><a class="list" href="kcal.html"> Калораж в продуктах </a></li>
             </ul>
         </div>
     </center>
+</div>
 
+<p id="p_1">Калорійність найпопулярніших продуктів</p>
+<p id="p_2">Основні джерела калорій (а, отже, енергії): білки, жири та вуглеводи.
+    У 1 г жирів міститься 9 калорій, 1 г білків і вуглеводів — 4. Вуглеводи є
+    основним пальним для організму. Коли кількість їх у раціоні обмежена — енергія
+    береться із жирів та білків, які в умовах раціонального харчування витрачаються
+    на інші потреби організму. Повсякденні продукти, зазвичай, мають у своєму складі
+    усі ці компоненти і має свою калорійність. Вираховують цей коефіцієнт у кілокалоріях (1 ккал = 1000 кал).
+</p>
+
+<div id="calcutable">
+    <table class="ccs">
+        <tbody>
+        <tr class="text1">
+            <th class="product">Продукт  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+            <th class="proteins">Білки, г  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+            <th class="fat">Жири, г  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+            <th class="carbohydrates">Вуглеводи, г &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+            <th class="calories">Ккал/100 г     </th>
+        </tr>
+
+        <tr class="odd">
+            <td class="product">Баклажани</td>
+            <td>0,6</td>
+            <td>0,1</td>
+            <td>5,5</td>
+            <td>24</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Бруква</td>
+            <td>1,2</td>
+            <td>0,1</td>
+            <td>8,1</td>
+            <td>37</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Капуста білокачанна</td>
+            <td>1,8</td>
+            <td>0</td>
+            <td>5,4</td>
+            <td>28</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Цибуля порей</td>
+            <td>3,0</td>
+            <td>0</td>
+            <td>7,3</td>
+            <td>40</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Редис</td>
+            <td>1,2</td>
+            <td>0</td>
+            <td>4,1</td>
+            <td>20</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Салат</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>2,2</td>
+            <td>14</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Баранина</td>
+            <td>16,3</td>
+            <td>15,3</td>
+            <td>0,0</td>
+            <td>203</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яловичина</td>
+            <td>18,9</td>
+            <td>12,4</td>
+            <td>0,0</td>
+            <td>187</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Індичка</td>
+            <td>21,6</td>
+            <td>12,0</td>
+            <td>0,8</td>
+            <td>197</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кури</td>
+            <td>20,8</td>
+            <td>8,8</td>
+            <td>0,6</td>
+            <td>165</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Качки</td>
+            <td>16,5</td>
+            <td>61,2</td>
+            <td>0,0</td>
+            <td>346</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горошок зелений</td>
+            <td>5,0</td>
+            <td>0,2</td>
+            <td>13,3</td>
+            <td>72</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кабачки</td>
+            <td>0,6</td>
+            <td>0,3</td>
+            <td>5,7</td>
+            <td>27</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Капуста червонокачанна</td>
+            <td>1,8</td>
+            <td>0</td>
+            <td>6,1</td>
+            <td>31</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Капуста цвітна</td>
+            <td>2,5</td>
+            <td>0</td>
+            <td>4,9</td>
+            <td>29</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Картопля</td>
+            <td>2,0</td>
+            <td>0,1</td>
+            <td>19,7</td>
+            <td>83</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Цибуля зелена (перо)</td>
+            <td>1,3</td>
+            <td>0</td>
+            <td>4,3</td>
+            <td>22</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Цибуля ріпчаста</td>
+            <td>1,7</td>
+            <td>0</td>
+            <td>9,5</td>
+            <td>43</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Морква червона</td>
+            <td>1,3</td>
+            <td>0,1</td>
+            <td>7,0</td>
+            <td>33</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Огірки грунтові</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>3,0</td>
+            <td>15</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Огірки парникові</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>1,8</td>
+            <td>10</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Перець зелений солодкий</td>
+            <td>1,3</td>
+            <td>0</td>
+            <td>4,7</td>
+            <td>23</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Перець червоний солодкий</td>
+            <td>1,3</td>
+            <td>0</td>
+            <td>5,7</td>
+            <td>27</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Петрушка (зелень)</td>
+            <td>3,7</td>
+            <td>0</td>
+            <td>8,1</td>
+            <td>45</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Петрушка (корінь)</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>11,0</td>
+            <td>47</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ревінь (стебловий)</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>2,9</td>
+            <td>16</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Редька</td>
+            <td>1,9</td>
+            <td>0</td>
+            <td>7,0</td>
+            <td>34</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ріпа</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>5,9</td>
+            <td>28</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Буряк</td>
+            <td>1,7</td>
+            <td>0</td>
+            <td>10,8</td>
+            <td>48</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Томати (грунтові)</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>4,2</td>
+            <td>19</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Томати (парникові)</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>2,9</td>
+            <td>14</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Зелена квасоля (стручок)</td>
+            <td>4,0</td>
+            <td>0</td>
+            <td>4,3</td>
+            <td>32</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Хрін</td>
+            <td>2,5</td>
+            <td>0</td>
+            <td>16,3</td>
+            <td>71</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Черемша</td>
+            <td>2,4</td>
+            <td>0</td>
+            <td>6,5</td>
+            <td>34</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Часник</td>
+            <td>6,5</td>
+            <td>0</td>
+            <td>21,2</td>
+            <td>106</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Шпинат</td>
+            <td>2,9</td>
+            <td>0</td>
+            <td>2,3</td>
+            <td>21</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Конина</td>
+            <td>20,2</td>
+            <td>7,0</td>
+            <td>0,0</td>
+            <td>143</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кролик</td>
+            <td>20,7</td>
+            <td>12,9</td>
+            <td>0,0</td>
+            <td>199</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Поросята</td>
+            <td>20,6</td>
+            <td>3</td>
+            <td>0,0</td>
+            <td>109</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Свинина нежирна</td>
+            <td>16,4</td>
+            <td>27,8</td>
+            <td>0,0</td>
+            <td>316</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Свинина жирна</td>
+            <td>11,4</td>
+            <td>49,3</td>
+            <td>0,0</td>
+            <td>489</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Телятина</td>
+            <td>19,7</td>
+            <td>1,2</td>
+            <td>0,0</td>
+            <td>90</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Оленина</td>
+            <td>19,5</td>
+            <td>8,5</td>
+            <td>0,0</td>
+            <td>155</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Баранячі нирки</td>
+            <td>13,6</td>
+            <td>2,5</td>
+            <td>0,0</td>
+            <td>77</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Бараняча печінка</td>
+            <td>18,7</td>
+            <td>2,9</td>
+            <td>0,0</td>
+            <td>101</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Бараняче серце</td>
+            <td>13,5</td>
+            <td>2,5</td>
+            <td>0,0</td>
+            <td>82</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Яловичі мізки</td>
+            <td>9,5</td>
+            <td>9,5</td>
+            <td>0,0</td>
+            <td>124</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яловича печінка</td>
+            <td>17,4</td>
+            <td>3,1</td>
+            <td>0,0</td>
+            <td>98</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Яловичі нирки</td>
+            <td>12,5</td>
+            <td>1,8</td>
+            <td>0,0</td>
+            <td>66</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яловиче вим`я</td>
+            <td>12,3</td>
+            <td>13,7</td>
+            <td>0,0</td>
+            <td>173</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Яловиче серце</td>
+            <td>15,0</td>
+            <td>3,0</td>
+            <td>0,0</td>
+            <td>87</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яловичий язик</td>
+            <td>13,6</td>
+            <td>12,1</td>
+            <td>0,0</td>
+            <td>163</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Свинячі мізки</td>
+            <td>10,5</td>
+            <td>8,6</td>
+            <td>0,8</td>
+            <td>119</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Нирки свинні</td>
+            <td>13,0</td>
+            <td>3,1</td>
+            <td>0,0</td>
+            <td>80</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Печінка свинна</td>
+            <td>18,8</td>
+            <td>3,6</td>
+            <td>0,0</td>
+            <td>108</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Серце свинне</td>
+            <td>15,1</td>
+            <td>3,2</td>
+            <td>0,0</td>
+            <td>89</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Язик свинячий</td>
+            <td>14,2</td>
+            <td>16,8</td>
+            <td>0,0</td>
+            <td>208</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Гуси</td>
+            <td>16,1</td>
+            <td>33,3</td>
+            <td>0,0</td>
+            <td>364</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Курчата</td>
+            <td>18,7</td>
+            <td>7,8</td>
+            <td>0,4</td>
+            <td>156</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Бички</td>
+            <td>12,8</td>
+            <td>8,1</td>
+            <td>5,2</td>
+            <td>145</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Горбуша</td>
+            <td>21</td>
+            <td>7</td>
+            <td>0</td>
+            <td>147</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Камбала</td>
+            <td>16,1</td>
+            <td>2,6</td>
+            <td>0</td>
+            <td>88</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Карась</td>
+            <td>17,7</td>
+            <td>1,8</td>
+            <td>0</td>
+            <td>87</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Карп</td>
+            <td>16</td>
+            <td>3,6</td>
+            <td>0</td>
+            <td>96</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кета</td>
+            <td>22</td>
+            <td>5,6</td>
+            <td>0</td>
+            <td>138</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кичуж (сріблястий лосось)</td>
+            <td>21,6</td>
+            <td>6</td>
+            <td>0</td>
+            <td>140</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кілька балтійська</td>
+            <td>14,1</td>
+            <td>9</td>
+            <td>0</td>
+            <td>137</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кілька каспійська</td>
+            <td>18,5</td>
+            <td>13,1</td>
+            <td>0</td>
+            <td>192</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Корюшка</td>
+            <td>15,5</td>
+            <td>3,2</td>
+            <td>0</td>
+            <td>91</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Льодяна</td>
+            <td>15,5</td>
+            <td>1,4</td>
+            <td>0</td>
+            <td>75</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Лящ</td>
+            <td>17,1</td>
+            <td>4,1</td>
+            <td>0</td>
+            <td>105</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сьомга</td>
+            <td>20,8</td>
+            <td>15,1</td>
+            <td>0</td>
+            <td>219</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Макрурус (гренадер)</td>
+            <td>13,2</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>60</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Мінога</td>
+            <td>14,7</td>
+            <td>11,9</td>
+            <td>0</td>
+            <td>166</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Минтай</td>
+            <td>15,9</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>70</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Мойва</td>
+            <td>13,4</td>
+            <td>11,5</td>
+            <td>0</td>
+            <td>157</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Навага</td>
+            <td>16,1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>73</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Навича</td>
+            <td>19,1</td>
+            <td>8</td>
+            <td>0</td>
+            <td>148</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Минь</td>
+            <td>18,8</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>81</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Нерка червона</td>
+            <td>20,3</td>
+            <td>8,4</td>
+            <td>0</td>
+            <td>157</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Нототенія мармурова</td>
+            <td>14,8</td>
+            <td>10,7</td>
+            <td>0</td>
+            <td>156</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Окунь морський</td>
+            <td>17,6</td>
+            <td>5,2</td>
+            <td>0</td>
+            <td>117</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Окунь річковий</td>
+            <td>18,5</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>82</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Осетер</td>
+            <td>16,4</td>
+            <td>10,9</td>
+            <td>0</td>
+            <td>164</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Палтус</td>
+            <td>18,9</td>
+            <td>3</td>
+            <td>0</td>
+            <td>103</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Пеламіда</td>
+            <td>22,4</td>
+            <td>14,2</td>
+            <td>0</td>
+            <td>217</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Пікша</td>
+            <td>17,2</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>73</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Путасу</td>
+            <td>16,1</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>72</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Рыба-шабля</td>
+            <td>20,3</td>
+            <td>3,2</td>
+            <td>0</td>
+            <td>110</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Рибець каспійський</td>
+            <td>19,2</td>
+            <td>2,4</td>
+            <td>0</td>
+            <td>98</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сазан</td>
+            <td>18,4</td>
+            <td>5,3</td>
+            <td>0</td>
+            <td>121</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сайра велика</td>
+            <td>18,6</td>
+            <td>20,8</td>
+            <td>0</td>
+            <td>262</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сайра дрібна</td>
+            <td>20,4</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>143</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Салака</td>
+            <td>17,3</td>
+            <td>5,6</td>
+            <td>0</td>
+            <td>121</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Севрюга</td>
+            <td>16,9</td>
+            <td>10,3</td>
+            <td>0</td>
+            <td>160</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Оселедець</td>
+            <td>17,7</td>
+            <td>19,5</td>
+            <td>0</td>
+            <td>242</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сиг</td>
+            <td>19</td>
+            <td>7,5</td>
+            <td>0</td>
+            <td>144</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Скумбрiя</td>
+            <td>18</td>
+            <td>9</td>
+            <td>0</td>
+            <td>153</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сом</td>
+            <td>16,8</td>
+            <td>8,5</td>
+            <td>0</td>
+            <td>144</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ставрида</td>
+            <td>18,5</td>
+            <td>5</td>
+            <td>0</td>
+            <td>119</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Стерлядь</td>
+            <td>17</td>
+            <td>6,1</td>
+            <td>0</td>
+            <td>320</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Судак</td>
+            <td>19</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>83</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Трiска</td>
+            <td>17,5</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>75</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Тунець</td>
+            <td>22,7</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>96</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вугільна риба</td>
+            <td>13,2</td>
+            <td>11,6</td>
+            <td>0</td>
+            <td>158</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вугор морський</td>
+            <td>19,1</td>
+            <td>1,9</td>
+            <td>0</td>
+            <td>94</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вугор</td>
+            <td>14,5</td>
+            <td>30,5</td>
+            <td>0</td>
+            <td>333</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Хек</td>
+            <td>16,6</td>
+            <td>2,2</td>
+            <td>0</td>
+            <td>86</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Щука</td>
+            <td>18,8</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>82</td>
+        </tr>
+        <tr class="even">
+            <td class="product">В’язь</td>
+            <td>18,2</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>117</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мідії</td>
+            <td>11,5</td>
+            <td>2</td>
+            <td>3,3</td>
+            <td>77</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Устриця</td>
+            <td>9</td>
+            <td>2</td>
+            <td>4,5</td>
+            <td>72</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Креветки далекосхідні</td>
+            <td>28,7</td>
+            <td>1,2</td>
+            <td>0</td>
+            <td>134</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Печінка тріски</td>
+            <td>4,2</td>
+            <td>65,7</td>
+            <td>0</td>
+            <td>613</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кальмар</td>
+            <td>18</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>75</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Раки річкові</td>
+            <td>15,5</td>
+            <td>1</td>
+            <td>1,2</td>
+            <td>76</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Краб</td>
+            <td>16</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>69</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Креветка</td>
+            <td>18</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>83</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Морська капуста</td>
+            <td>0,9</td>
+            <td>0,2</td>
+            <td>3,0</td>
+            <td>5</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Паста "Океан"</td>
+            <td>18,9</td>
+            <td>6,8</td>
+            <td>0</td>
+            <td>137</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Трепанг</td>
+            <td>7,3</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>35</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горбуші зерниста</td>
+            <td>30,6</td>
+            <td>11,5</td>
+            <td>1</td>
+            <td>230</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кети зерниста</td>
+            <td>31,6</td>
+            <td>13,8</td>
+            <td>0</td>
+            <td>251</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ляща пробійна</td>
+            <td>24,7</td>
+            <td>4,8</td>
+            <td>0</td>
+            <td>142</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Минтая пробійна</td>
+            <td>28,4</td>
+            <td>1,9</td>
+            <td>0</td>
+            <td>131</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Осетрини зерниста</td>
+            <td>28,9</td>
+            <td>9,7</td>
+            <td>0</td>
+            <td>203</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Осетрини паюсна</td>
+            <td>38,2</td>
+            <td>14,5</td>
+            <td>1,5</td>
+            <td>289</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Осетрини пробійна</td>
+            <td>36</td>
+            <td>10,2</td>
+            <td>0</td>
+            <td>123</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Севрюги зерниста</td>
+            <td>28,2</td>
+            <td>11,7</td>
+            <td>0,7</td>
+            <td>221</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яйце куряче</td>
+            <td>12,7</td>
+            <td>11,5</td>
+            <td>0,7</td>
+            <td>157</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Яєчний порошок</td>
+            <td>45</td>
+            <td>37,3</td>
+            <td>7,1</td>
+            <td>542</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сухий білок</td>
+            <td>73,3</td>
+            <td>1,8</td>
+            <td>7</td>
+            <td>336</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сухий жовток</td>
+            <td>34,2</td>
+            <td>52,2</td>
+            <td>4,4</td>
+            <td>632</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яйце перепелине</td>
+            <td>11,9</td>
+            <td>13,1</td>
+            <td>0,6</td>
+            <td>168</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Абрикоси</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>10,5</td>
+            <td>46</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Айва</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>8,9</td>
+            <td>38</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Алича</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>7,4</td>
+            <td>34</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ананас</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>11,8</td>
+            <td>48</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Банани</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>22,4</td>
+            <td>91</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вишня</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>11,3</td>
+            <td>49</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Гранат</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>11,8</td>
+            <td>52</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Груша</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>10,7</td>
+            <td>42</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Інжир</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>13,9</td>
+            <td>56</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кизил</td>
+            <td>1,0</td>
+            <td>0</td>
+            <td>9,7</td>
+            <td>45</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Ківі</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>8,1</td>
+            <td>47</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Персики</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>10,4</td>
+            <td>44</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Горобина садова</td>
+            <td>1,4</td>
+            <td>0</td>
+            <td>12,5</td>
+            <td>58</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горобина чорноплідна</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>12,0</td>
+            <td>54</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Слива садова</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>9,9</td>
+            <td>43</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Хурма</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>15,9</td>
+            <td>62</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Черешня</td>
+            <td>1,1</td>
+            <td>0</td>
+            <td>12,3</td>
+            <td>52</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Шовковиця</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>12,7</td>
+            <td>53</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Яблука</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>11,3</td>
+            <td>46</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Апельсин</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>8,4</td>
+            <td>38</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Грейпфрут</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>7,3</td>
+            <td>35</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Лимон</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>3,6</td>
+            <td>31</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мандарин</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>8,6</td>
+            <td>38</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Брусниця</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>8,6</td>
+            <td>40</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Виноград</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>17,5</td>
+            <td>69</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Лохина</td>
+            <td>1,0</td>
+            <td>0</td>
+            <td>7,7</td>
+            <td>37</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Ожина</td>
+            <td>2,0</td>
+            <td>0</td>
+            <td>5,3</td>
+            <td>33</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Суниця</td>
+            <td>1,8</td>
+            <td>0</td>
+            <td>8,1</td>
+            <td>41</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Журавлина</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>4,8</td>
+            <td>28</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Агрус</td>
+            <td>0,7</td>
+            <td>0</td>
+            <td>9,9</td>
+            <td>44</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Малина</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>9,0</td>
+            <td>41</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Морошка</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>6,8</td>
+            <td>31</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Обліпиха</td>
+            <td>0,9</td>
+            <td>0</td>
+            <td>5,5</td>
+            <td>30</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Порічки білі</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>8,7</td>
+            <td>39</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Порічки червоні</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>8,0</td>
+            <td>38</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Смородина чорна</td>
+            <td>1,0</td>
+            <td>0</td>
+            <td>8,0</td>
+            <td>40</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Терн</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>9,4</td>
+            <td>54</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Фініки</td>
+            <td>2,5</td>
+            <td>0</td>
+            <td>69,2</td>
+            <td>292</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Чорниця</td>
+            <td>1,1</td>
+            <td>0</td>
+            <td>8,6</td>
+            <td>40</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Шипшина свіжа</td>
+            <td>1,6</td>
+            <td>0</td>
+            <td>24,0</td>
+            <td>101</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Шипшина сушена</td>
+            <td>4,0</td>
+            <td>0</td>
+            <td>60,0</td>
+            <td>253</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Урюк</td>
+            <td>5,0</td>
+            <td>0</td>
+            <td>67,5</td>
+            <td>278</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Курага</td>
+            <td>5,2</td>
+            <td>0</td>
+            <td>65,9</td>
+            <td>272</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Родзинки з кісточкою</td>
+            <td>1,8</td>
+            <td>0</td>
+            <td>70,9</td>
+            <td>276</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Родзинки кишмиш</td>
+            <td>2,3</td>
+            <td>0</td>
+            <td>71,2</td>
+            <td>279</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вишня</td>
+            <td>1,5</td>
+            <td>0</td>
+            <td>73,0</td>
+            <td>292</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Груша</td>
+            <td>2,3</td>
+            <td>0</td>
+            <td>62,1</td>
+            <td>246</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Персики</td>
+            <td>3,0</td>
+            <td>0</td>
+            <td>68,5</td>
+            <td>275</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Чорнослив</td>
+            <td>2,3</td>
+            <td>0</td>
+            <td>65,6</td>
+            <td>264</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яблука</td>
+            <td>3,2</td>
+            <td>0</td>
+            <td>68,0</td>
+            <td>273</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Ацидофілін нежирний</td>
+            <td>3</td>
+            <td>0,1</td>
+            <td>3,9</td>
+            <td>31</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ацидофілін жирний</td>
+            <td>2,9</td>
+            <td>3,2</td>
+            <td>3,8</td>
+            <td>59</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Бринза з коров`ячого молока</td>
+            <td>17,9</td>
+            <td>20,1</td>
+            <td>0</td>
+            <td>260</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Йогурт натуральний 1,5% жирності</td>
+            <td>5,0</td>
+            <td>1,5</td>
+            <td>3,5</td>
+            <td>51</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кефір нежирний</td>
+            <td>3,0</td>
+            <td>0,1</td>
+            <td>3,8</td>
+            <td>30</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кефір жирний</td>
+            <td>2,8</td>
+            <td>3,2</td>
+            <td>4,1</td>
+            <td>59</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Молоко</td>
+            <td>2,8</td>
+            <td>3,2</td>
+            <td>4,7</td>
+            <td>58</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Молоко ацидофільне</td>
+            <td>2,8</td>
+            <td>3,2</td>
+            <td>10,8</td>
+            <td>83</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Молоко сухе незбиране</td>
+            <td>25,6</td>
+            <td>25,0</td>
+            <td>39,4</td>
+            <td>475</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Молоко згущене</td>
+            <td>7,0</td>
+            <td>7,9</td>
+            <td>9,5</td>
+            <td>135</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Молоко згущене з цукром</td>
+            <td>7,2</td>
+            <td>8,5</td>
+            <td>56,0</td>
+            <td>315</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ряжанка</td>
+            <td>3,0</td>
+            <td>6,0</td>
+            <td>4,1</td>
+            <td>85</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вершки 10%</td>
+            <td>3,0</td>
+            <td>10,0</td>
+            <td>4,0</td>
+            <td>118</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вершки 20%</td>
+            <td>2,8</td>
+            <td>20,0</td>
+            <td>3,6</td>
+            <td>205</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сметана 10%</td>
+            <td>3,0</td>
+            <td>10,0</td>
+            <td>2,9</td>
+            <td>116</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сметана 20%</td>
+            <td>2,8</td>
+            <td>20,0</td>
+            <td>3,2</td>
+            <td>206</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сирки і маса сирні особливі</td>
+            <td>7,1</td>
+            <td>23,0</td>
+            <td>27,5</td>
+            <td>340</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир Російський</td>
+            <td>23,4</td>
+            <td>30,0</td>
+            <td>0</td>
+            <td>371</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир Голландский</td>
+            <td>26,8</td>
+            <td>27,3</td>
+            <td>0</td>
+            <td>361</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир Швейцарський</td>
+            <td>24,9</td>
+            <td>31,8</td>
+            <td>0</td>
+            <td>369</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир Пошехонський</td>
+            <td>26,0</td>
+            <td>26,5</td>
+            <td>0</td>
+            <td>334</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир Адигейський</td>
+            <td>19,8</td>
+            <td>19,8</td>
+            <td>1,5</td>
+            <td>264</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир плавлений</td>
+            <td>24,0</td>
+            <td>13,5</td>
+            <td>0,0</td>
+            <td>226</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир ковбасний</td>
+            <td>21,4</td>
+            <td>19,4</td>
+            <td>3,7</td>
+            <td>275</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир Чеддер</td>
+            <td>23,5</td>
+            <td>30,8</td>
+            <td>0</td>
+            <td>380</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир Рокфор</td>
+            <td>20,5</td>
+            <td>27,5</td>
+            <td>0</td>
+            <td>335</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сулугуні</td>
+            <td>20,5</td>
+            <td>22</td>
+            <td>0,4</td>
+            <td>286</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир жирний</td>
+            <td>14,0</td>
+            <td>18,0</td>
+            <td>1,3</td>
+            <td>226</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир напівжирний</td>
+            <td>16,7</td>
+            <td>9,0</td>
+            <td>1,3</td>
+            <td>156</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сир нежирний</td>
+            <td>18,0</td>
+            <td>0,6</td>
+            <td>1,5</td>
+            <td>86</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сир м`який дієтичний</td>
+            <td>22</td>
+            <td>0,6</td>
+            <td>3,3</td>
+            <td>110</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кумис з кобилячого молока</td>
+            <td>2,1</td>
+            <td>1,9</td>
+            <td>5</td>
+            <td>50</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кисле молоко нежирне</td>
+            <td>3</td>
+            <td>0,1</td>
+            <td>3,8</td>
+            <td>30</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кисле молоко жирне</td>
+            <td>2,9</td>
+            <td>3,2</td>
+            <td>4,1</td>
+            <td>59</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Морозиво молочне</td>
+            <td>3,7</td>
+            <td>3,5</td>
+            <td>21,3</td>
+            <td>132</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Морозиво вершкове</td>
+            <td>3,7</td>
+            <td>10</td>
+            <td>19,4</td>
+            <td>183</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Морозиво пломбір</td>
+            <td>3,7</td>
+            <td>15</td>
+            <td>20,4</td>
+            <td>232</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Маса сиркова особлива</td>
+            <td>7,1</td>
+            <td>23</td>
+            <td>27,1</td>
+            <td>345</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Гречана ядриця</td>
+            <td>12,6</td>
+            <td>2,6</td>
+            <td>68,0</td>
+            <td>329</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Гречана проділ</td>
+            <td>9,5</td>
+            <td>1,9</td>
+            <td>72,2</td>
+            <td>326</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Манна</td>
+            <td>11,3</td>
+            <td>0,7</td>
+            <td>73,3</td>
+            <td>326</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вівсяна</td>
+            <td>11,9</td>
+            <td>5,8</td>
+            <td>65,4</td>
+            <td>345</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Перлова</td>
+            <td>9,3</td>
+            <td>1,1</td>
+            <td>73,7</td>
+            <td>324</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Пшоно</td>
+            <td>12,0</td>
+            <td>2,9</td>
+            <td>69,3</td>
+            <td>334</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Рисова</td>
+            <td>7,0</td>
+            <td>0,6</td>
+            <td>73,7</td>
+            <td>323</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Пшенична "Полтавська"</td>
+            <td>12,7</td>
+            <td>1,1</td>
+            <td>70,6</td>
+            <td>325</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Толокно</td>
+            <td>12,2</td>
+            <td>5,8</td>
+            <td>68,3</td>
+            <td>357</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ячна</td>
+            <td>10,4</td>
+            <td>1,3</td>
+            <td>71,7</td>
+            <td>322</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Геркулес</td>
+            <td>13,1</td>
+            <td>6,2</td>
+            <td>65,7</td>
+            <td>355</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кукурудзяна</td>
+            <td>8,3</td>
+            <td>1,2</td>
+            <td>75,0</td>
+            <td>325</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Боби</td>
+            <td>6,0</td>
+            <td>0,1</td>
+            <td>8,3</td>
+            <td>58</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горох лущений</td>
+            <td>23,0</td>
+            <td>1,6</td>
+            <td>57,7</td>
+            <td>323</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Горох цілий</td>
+            <td>23,0</td>
+            <td>1,2</td>
+            <td>53,3</td>
+            <td>303</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горошек зелений</td>
+            <td>5</td>
+            <td>0,2</td>
+            <td>8,3</td>
+            <td>55</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Соя</td>
+            <td>34,9</td>
+            <td>17,3</td>
+            <td>26,5</td>
+            <td>395</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Квасоля</td>
+            <td>22,3</td>
+            <td>1,7</td>
+            <td>54,5</td>
+            <td>309</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сочевиця</td>
+            <td>24,8</td>
+            <td>1,1</td>
+            <td>53,7</td>
+            <td>310</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Білі свіжі</td>
+            <td>3,2</td>
+            <td>0,7</td>
+            <td>1,6</td>
+            <td>25</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Білі сушені</td>
+            <td>27,6</td>
+            <td>6,8</td>
+            <td>10,0</td>
+            <td>209</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Підберезники свіжі</td>
+            <td>2,3</td>
+            <td>0,9</td>
+            <td>3,7</td>
+            <td>31</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Підосичники свіжі</td>
+            <td>3,3</td>
+            <td>0,5</td>
+            <td>3,4</td>
+            <td>31</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сироїжки свіжі</td>
+            <td>1,7</td>
+            <td>0,3</td>
+            <td>1,4</td>
+            <td>17</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Фундук</td>
+            <td>16,1</td>
+            <td>66,9</td>
+            <td>9,9</td>
+            <td>704</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Мигдаль</td>
+            <td>18,6</td>
+            <td>57,7</td>
+            <td>13,6</td>
+            <td>645</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Грецький горіх</td>
+            <td>13,8</td>
+            <td>61,3</td>
+            <td>10,2</td>
+            <td>648</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Арахіс</td>
+            <td>26,3</td>
+            <td>45,2</td>
+            <td>9,7</td>
+            <td>548</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кешью</td>
+            <td>18,5</td>
+            <td>48,5</td>
+            <td>22,5</td>
+            <td>600</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ліщина</td>
+            <td>13</td>
+            <td>62,6</td>
+            <td>9,3</td>
+            <td>653</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мак</td>
+            <td>17,5</td>
+            <td>47,5</td>
+            <td>14,5</td>
+            <td>556</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кунжут</td>
+            <td>19,4</td>
+            <td>48,7</td>
+            <td>12,2</td>
+            <td>565</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Насіння соняшника</td>
+            <td>20,7</td>
+            <td>52,9</td>
+            <td>5</td>
+            <td>578</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Хліб житній</td>
+            <td>4,7</td>
+            <td>0,7</td>
+            <td>49,8</td>
+            <td>214</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Хліб пшеничний з муки 1 гатунку</td>
+            <td>7,7</td>
+            <td>2,4</td>
+            <td>53,4</td>
+            <td>254</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Здобна випічка</td>
+            <td>7,6</td>
+            <td>4,5</td>
+            <td>60,0</td>
+            <td>297</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Бублики</td>
+            <td>10,4</td>
+            <td>1,3</td>
+            <td>68,7</td>
+            <td>312</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сушіння</td>
+            <td>11,0</td>
+            <td>1,3</td>
+            <td>73,0</td>
+            <td>330</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сухарі пшеничні</td>
+            <td>11,2</td>
+            <td>1,4</td>
+            <td>72,4</td>
+            <td>331</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сухарі вершкові</td>
+            <td>8,5</td>
+            <td>10,6</td>
+            <td>71,3</td>
+            <td>397</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Борошно пшеничне вищого гатунку</td>
+            <td>10,3</td>
+            <td>0,9</td>
+            <td>74,2</td>
+            <td>327</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Борошно пшеничне 1 гатунку</td>
+            <td>10,6</td>
+            <td>1,3</td>
+            <td>73,2</td>
+            <td>329</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Борошно пшеничне 2 гатунку</td>
+            <td>11,7</td>
+            <td>1,8</td>
+            <td>70,8</td>
+            <td>328</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Борошно житнє</td>
+            <td>6,9</td>
+            <td>1,1</td>
+            <td>76,9</td>
+            <td>326</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Борошно гречане</td>
+            <td>13,6</td>
+            <td>1,2</td>
+            <td>71,9</td>
+            <td>353</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Борошно рисове</td>
+            <td>7,4</td>
+            <td>0,6</td>
+            <td>80,2</td>
+            <td>356</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Борошно кукурудзяне</td>
+            <td>7,2</td>
+            <td>1,5</td>
+            <td>72,1</td>
+            <td>331</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Майонез</td>
+            <td>3,1</td>
+            <td>67</td>
+            <td>2,6</td>
+            <td>627</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Шпиг свинячий (без шкірки)</td>
+            <td>1,4</td>
+            <td>92,8</td>
+            <td>0</td>
+            <td>816</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Маргарин низькокалорійний</td>
+            <td>0,5</td>
+            <td>60</td>
+            <td>0,7</td>
+            <td>545</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Маргарин молочний</td>
+            <td>0,3</td>
+            <td>82,3</td>
+            <td>1</td>
+            <td>746</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Маргарин бутербродний</td>
+            <td>0,5</td>
+            <td>82</td>
+            <td>1,2</td>
+            <td>744</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Масло рослинне</td>
+            <td>0</td>
+            <td>99,9</td>
+            <td>0</td>
+            <td>899</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Масло вершкове</td>
+            <td>0,6</td>
+            <td>82,5</td>
+            <td>0,9</td>
+            <td>748</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Масло пряжене</td>
+            <td>0,3</td>
+            <td>98</td>
+            <td>0,6</td>
+            <td>887</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Масло арахісове</td>
+            <td>0</td>
+            <td>99,9</td>
+            <td>0</td>
+            <td>899</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Масло гірчичне</td>
+            <td>0</td>
+            <td>99,8</td>
+            <td>0</td>
+            <td>898</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Масло какао</td>
+            <td>0</td>
+            <td>99,9</td>
+            <td>0</td>
+            <td>899</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Масло кокосове</td>
+            <td>0</td>
+            <td>99,9</td>
+            <td>0</td>
+            <td>899</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Масло конопляне</td>
+            <td>0</td>
+            <td>99,9</td>
+            <td>0</td>
+            <td>899</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Жир з печінки тріски</td>
+            <td>0</td>
+            <td>99,8</td>
+            <td>0</td>
+            <td>898</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Жир кістковий топлений</td>
+            <td>0</td>
+            <td>99,7</td>
+            <td>0</td>
+            <td>897</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Жир курячий</td>
+            <td>0</td>
+            <td>99,7</td>
+            <td>0</td>
+            <td>897</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Жир кондитерський твердий</td>
+            <td>0</td>
+            <td>99,8</td>
+            <td>0</td>
+            <td>898</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Жир баранячий або яловичий топлений</td>
+            <td>0</td>
+            <td>99,7</td>
+            <td>0</td>
+            <td>897</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варена ковбаса Діабетична</td>
+            <td>12,1</td>
+            <td>22,8</td>
+            <td>0</td>
+            <td>254</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варена ковбаса Дієтична</td>
+            <td>12,1</td>
+            <td>13,5</td>
+            <td>0</td>
+            <td>170</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варена ковбаса Лікарська</td>
+            <td>13,7</td>
+            <td>22,8</td>
+            <td>0</td>
+            <td>260</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варена ковбаса Любительська</td>
+            <td>12,2</td>
+            <td>28,0</td>
+            <td>0</td>
+            <td>301</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варена ковбаса Молочна</td>
+            <td>11,7</td>
+            <td>22,8</td>
+            <td>0</td>
+            <td>252</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варена ковбаса Окрема</td>
+            <td>10,1</td>
+            <td>20,1</td>
+            <td>1,8</td>
+            <td>228</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варена ковбаса Теляча</td>
+            <td>12,5</td>
+            <td>29,6</td>
+            <td>0</td>
+            <td>316</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сардельки Свинячі</td>
+            <td>10,1</td>
+            <td>31,6</td>
+            <td>1,9</td>
+            <td>332</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сосиски Молочні</td>
+            <td>12,3</td>
+            <td>25,3</td>
+            <td>0</td>
+            <td>277</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сосиски Російські</td>
+            <td>12,0</td>
+            <td>19,1</td>
+            <td>0</td>
+            <td>220</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сосиски Свинячі</td>
+            <td>11,8</td>
+            <td>30,8</td>
+            <td>0</td>
+            <td>324</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варено-копчена Любительська</td>
+            <td>17,3</td>
+            <td>39,0</td>
+            <td>0</td>
+            <td>420</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варено-копчена Сервелат</td>
+            <td>28,2</td>
+            <td>27,5</td>
+            <td>0</td>
+            <td>360</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Напівкопчена Краківська</td>
+            <td>16,2</td>
+            <td>44,6</td>
+            <td>0</td>
+            <td>466</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Напівкопчена Мінська</td>
+            <td>23,0</td>
+            <td>17,4</td>
+            <td>2,7</td>
+            <td>259</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Напівкопчена Полтавська</td>
+            <td>16,4</td>
+            <td>39,0</td>
+            <td>0</td>
+            <td>417</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Напівкопчена Українська</td>
+            <td>16,5</td>
+            <td>34,4</td>
+            <td>0</td>
+            <td>376</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сирокопчена Любительська</td>
+            <td>20,9</td>
+            <td>47,8</td>
+            <td>0</td>
+            <td>514</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Сирокопчена Московська</td>
+            <td>24,8</td>
+            <td>41,5</td>
+            <td>0</td>
+            <td>473</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мед</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>80,3</td>
+            <td>308</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Драже фруктове</td>
+            <td>3,7</td>
+            <td>10,2</td>
+            <td>73,1</td>
+            <td>384</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Зефір</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>78,3</td>
+            <td>299</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ірис</td>
+            <td>3,3</td>
+            <td>7,5</td>
+            <td>81,8</td>
+            <td>387</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мармелад</td>
+            <td>0</td>
+            <td>0,1</td>
+            <td>77,7</td>
+            <td>296</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Карамель (всередньому)</td>
+            <td>0</td>
+            <td>0,1</td>
+            <td>77,7</td>
+            <td>296</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Цукерки, глазуровані шоколадом</td>
+            <td>2,9</td>
+            <td>10,7</td>
+            <td>76,6</td>
+            <td>396</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вафлі з фруктовими начинками</td>
+            <td>3,2</td>
+            <td>2,8</td>
+            <td>80,1</td>
+            <td>342</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вафлі з масляними начинками</td>
+            <td>3,4</td>
+            <td>30,2</td>
+            <td>64,7</td>
+            <td>530</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Тістечко листкове з кремом</td>
+            <td>5,4</td>
+            <td>38,6</td>
+            <td>46,4</td>
+            <td>544</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Тістечко бісквітне з фруктовою начинкою</td>
+            <td>4,7</td>
+            <td>9,3</td>
+            <td>84,4</td>
+            <td>344</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Пряники</td>
+            <td>4,8</td>
+            <td>2,8</td>
+            <td>77,7</td>
+            <td>336</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Торт бісквітний з фруктовою начинкою</td>
+            <td>4,7</td>
+            <td>20</td>
+            <td>49,8</td>
+            <td>386</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Торт мигдальний</td>
+            <td>6,6</td>
+            <td>35,8</td>
+            <td>46,8</td>
+            <td>524</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варення з груші</td>
+            <td>0,3</td>
+            <td>0,2</td>
+            <td>70,8</td>
+            <td>273</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варення з полуниці</td>
+            <td>0,3</td>
+            <td>0,1</td>
+            <td>74</td>
+            <td>285</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варення з малини</td>
+            <td>0,6</td>
+            <td>0,2</td>
+            <td>70,4</td>
+            <td>273</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варення з мандаринів</td>
+            <td>0,7</td>
+            <td>0,2</td>
+            <td>75,9</td>
+            <td>294</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варення з персиків</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>66,8</td>
+            <td>258</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Варення зі сливи</td>
+            <td>0,4</td>
+            <td>0,3</td>
+            <td>74,2</td>
+            <td>288</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Варення з яблук</td>
+            <td>0,4</td>
+            <td>0,3</td>
+            <td>68,2</td>
+            <td>265</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Джем абрикосовий</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>71,6</td>
+            <td>276</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Джем мандариновий</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>71,8</td>
+            <td>276</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Повидло яблучне</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>65</td>
+            <td>250</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вина сухі</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>0,3</td>
+            <td>64</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вина напівсухі</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>2,5</td>
+            <td>78</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вина напівсолодкі</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>5</td>
+            <td>88</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вина солодкі</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>8</td>
+            <td>100</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вина міцні</td>
+            <td>0,4</td>
+            <td>0</td>
+            <td>12</td>
+            <td>163</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Вина десертні</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>20</td>
+            <td>172</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вина лікерні</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>30</td>
+            <td>212</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Горілка</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0,4</td>
+            <td>235</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Коньяк</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1,5</td>
+            <td>240</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Пиво світле 11%</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>4,6</td>
+            <td>42</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Пиво темне 13%</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>5,7</td>
+            <td>48</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Квас хлібний</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>5,2</td>
+            <td>27</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Кава чорна без цукру</td>
+            <td>0,2</td>
+            <td>0</td>
+            <td>5,2</td>
+            <td>7</td>
+        </tr>
+        <tr class="even">
+            <td class="product">«Нарзан»</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Морквяний сік</td>
+            <td>1,1</td>
+            <td>0,1</td>
+            <td>12,6</td>
+            <td>56</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Буряковий сік</td>
+            <td>1</td>
+            <td>0</td>
+            <td>14,1</td>
+            <td>61</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Томатний сік</td>
+            <td>1</td>
+            <td>0,1</td>
+            <td>2,9</td>
+            <td>18</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Абрикосовий сік</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>12,7</td>
+            <td>55</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Айвовий сік</td>
+            <td>0,5</td>
+            <td>0,1</td>
+            <td>11,2</td>
+            <td>51</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Ананасовий сік</td>
+            <td>0,3</td>
+            <td>0,1</td>
+            <td>11,8</td>
+            <td>52</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Апельсиновий сік</td>
+            <td>0,7</td>
+            <td>0,1</td>
+            <td>13,2</td>
+            <td>60</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Виноградний сік</td>
+            <td>0,3</td>
+            <td>0,2</td>
+            <td>16,3</td>
+            <td>70</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Вишневий сік</td>
+            <td>0,7</td>
+            <td>0,2</td>
+            <td>11,4</td>
+            <td>51</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Гранатовий сік</td>
+            <td>0,3</td>
+            <td>0,1</td>
+            <td>14,2</td>
+            <td>56</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Грейпфрутовий сік</td>
+            <td>0,3</td>
+            <td>0,1</td>
+            <td>7,9</td>
+            <td>38</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Лимонний сік</td>
+            <td>0,6</td>
+            <td>0</td>
+            <td>3,9</td>
+            <td>33</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Мандариновий сік</td>
+            <td>0,8</td>
+            <td>0</td>
+            <td>9,8</td>
+            <td>454</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Персиковий сік</td>
+            <td>0,3</td>
+            <td>0</td>
+            <td>16,5</td>
+            <td>68</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сливовий сік</td>
+            <td>0,3</td>
+            <td>0,1</td>
+            <td>15,2</td>
+            <td>68</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Чорносмородиновий сік</td>
+            <td>0,5</td>
+            <td>0</td>
+            <td>7,3</td>
+            <td>41</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Шипшиновий сік</td>
+            <td>0,1</td>
+            <td>0,2</td>
+            <td>16,1</td>
+            <td>67</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Яблучний сік</td>
+            <td>0,5</td>
+            <td>0,1</td>
+            <td>10,1</td>
+            <td>46</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Грушевий сік</td>
+            <td>0</td>
+            <td>0</td>
+            <td>14,4</td>
+            <td>59</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Чай з цукром</td>
+            <td>0,1</td>
+            <td>0</td>
+            <td>7</td>
+            <td>28</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Чай з лимоном</td>
+            <td>0,1</td>
+            <td>0</td>
+            <td>6,8</td>
+            <td>28</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Кока-кола</td>
+            <td>0</td>
+            <td>0</td>
+            <td>8,7</td>
+            <td>38</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Гірчиця столова</td>
+            <td>9,9</td>
+            <td>12,7</td>
+            <td>5,3</td>
+            <td>143</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Порошок гірчичний</td>
+            <td>37,1</td>
+            <td>32,6</td>
+            <td>11,1</td>
+            <td>378</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Дріжджі пресовані</td>
+            <td>12,7</td>
+            <td>8,5</td>
+            <td>2,7</td>
+            <td>109</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Желатин</td>
+            <td>87,2</td>
+            <td>0,7</td>
+            <td>0,4</td>
+            <td>355</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Крохмаль</td>
+            <td>1</td>
+            <td>0,6</td>
+            <td>83,5</td>
+            <td>343</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Висівки пшеничні</td>
+            <td>16</td>
+            <td>16,6</td>
+            <td>3,8</td>
+            <td>165</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Сіль поварена харчова</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Винний оцет 3%</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>9</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Соус білий основний</td>
+            <td>1</td>
+            <td>3,8</td>
+            <td>4,1</td>
+            <td>56</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Соус грибний</td>
+            <td>1,2</td>
+            <td>4,8</td>
+            <td>6,2</td>
+            <td>82</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Соус журавлинний</td>
+            <td>0</td>
+            <td>12,6</td>
+            <td>0</td>
+            <td>51</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Соус червоний основний</td>
+            <td>1,1</td>
+            <td>6,2</td>
+            <td>2</td>
+            <td>48</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Соус цибульний</td>
+            <td>1,3</td>
+            <td>6,1</td>
+            <td>4,8</td>
+            <td>75</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Соус молочний</td>
+            <td>2</td>
+            <td>7,1</td>
+            <td>5,2</td>
+            <td>84</td>
+        </tr>
+        <tr class="odd">
+            <td class="product">Соус з хріном</td>
+            <td>0,7</td>
+            <td>4,2</td>
+            <td>0,1</td>
+            <td>27</td>
+        </tr>
+        <tr class="even">
+            <td class="product">Соус томатний</td>
+            <td>1,7</td>
+            <td>7,8</td>
+            <td>4,5</td>
+            <td>80</td>
+        </tr>
+
+        </tbody>
+    </table>
 </div>
 
 </body>

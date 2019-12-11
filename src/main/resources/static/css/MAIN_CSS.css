@@ -41,3 +41,25 @@ body {
     text-decoration: none;
     color: midnightblue;
 }
+
+.p_1 {
+    font-size: 70px;
+    color: darkblue;
+    font-weight: 900;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+    float: left;
+    text-decoration: double;
+}
+
+.p_2 {
+    font-size: 30px;
+    font-family: Arial;
+    color: black;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 50px;
+    text-align: justify;
+    float: left;
+}

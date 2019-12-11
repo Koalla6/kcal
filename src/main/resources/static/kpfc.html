@@ -4,62 +4,132 @@
     <meta charset="UTF-8">
     <title>KPFC</title>
     <link rel="stylesheet" type="text/css" href="css/KPFC_CSS.css">
+    <script src="js/kpfc.js"></script>
 </head>
 <body>
+
 <div id="main">
     <center>
         <div id="menu">
             <ul class="menu">
-                <li> <a class="list" href="imt.html"> Body mass index </a> </li>
-                <li> <a class="list" href="kpfc.html" > KPFC index </a></li>
-                <li> <a class="list" href="kcal.html"> Calories in foods </a></li>
+                <li><a class="list" href="imt.html"> Індекс маси тіла </a></li>
+                <li><a class="list" href="kpfc.html"> Норми КБЖВ </a></li>
+                <li><a class="list" href="kcal.html"> Калораж в продуктах </a></li>
             </ul>
         </div>
     </center>
 
-    <p id="p_1">Calculate your Calories Proteins Fats Carbohydrates Index</p>
+    <p id="p_1">Підрахуйте норми КБЖВ (калорій білків жирів вуглеводів)</p>
 
-    <p id="p_2">
-        The main sources of proteins: meat, fish, seafood, hard and sour milk cheese, eggs, legumes.
-
-        Sources of fats: vegetable and animal oils, nuts, fatty fish (salmon, trout).
-
-        Carbohydrates to maintain vitality and normal body functions should be greatest.
-        They are found in cereals, pasta, potatoes, fruits, honey.
-
-        The sweets also contain a large amount of carbohydrates, but others - simple.
-        Such carbohydrates are quickly absorbed by the body and are deposited by
-        additional inches on the waist, hips and abdomen.
+    <p class="p_2">
+        Основні джерела білків: м'ясо, риба, морепродукти, твердий та кисломолочний сир, яйця, бобові.
+    </p>
+    <p class="p_2">
+        Джерела жиру: рослинні і тваринні масла, горіхи, жирні сорти риби (сьомга, форель).
+    </p>
+    <p class="p_2">
+        Вуглеводів для підтримки життєдіяльності і нормальних функцій організму повинно бути
+        найбільше. Містяться вони в крупах, макаронах, картоплі, фруктах, меді.
+    </p>
+    <p class="p_2">
+        У солодощах теж міститься велика кількість вуглеводів, але інших − простих. Такі
+        вуглеводи швидко засвоюються організмом і осідають додатковими сантиметрами на талії, стегнах і животі.
     </p>
 
 
-    <div id="imt_parameters">
+    <div id="kpfc_parameters">
         <center>
             <form name="parameters" id="param">
                 <table>
                     <tr>
-                        <td class="numbers1"> Height (centimeters) </td>
+                        <td class="text1"> Стать</td>
                         <td class="include1">
-                            <input id ="height_range" type="range" name="h" min="140" max="220" oninput="func_h_range()">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input id="male" type="radio" name="radio1" value="male"/> Чоловіча
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="female" type="radio" name="radio1" value="female"/> Жіноча
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
+                    </tr>
+                    <tr>
+                        <td class="text1"> Зріст (сантиметри)</td>
                         <td class="include1">
                             <input id="height_number" type="number" name="height" min="140" max="220">
                         </td>
                     </tr>
                     <tr>
-                        <td class="numbers1"  style="margin-top: 35px"> Weight (kilograms) </td>
+                        <td class="text1"> Вага (кілограми)</td>
                         <td class="include1">
-                            <input  id="weight_range" type="range" name="w" min="40" max="200" oninput="func_w_range()">
+                            <input id="weight_number" type="number" name="weight" min="40" max="200">
                         </td>
+                    </tr>
+                    <tr>
+                        <td class="text1"> Вік (роки)</td>
                         <td class="include1">
-                            <input id="weight_number" style="padding: 5px; font-size: 15px"
-                                   type="number" name="weight" min="40" max="200">
+                            <input id="age_number" type="number" name="age" min="10" max="199">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text1"> Активність</td>
+                        <td class="include1">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input id="min_1.2" type="radio" name="radio2" value="min_12"/> Мляві тренування
+                                        раз на тиждень
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="min_1.37" type="radio" name="radio2" value="min_1.37"/> Мляві
+                                        тренування 2 - 3 рази на тиждень
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="norm_1.45" type="radio" name="radio2" value="norm_1.45"/> Активні
+                                        тренування 3 - 4 рази на тиждень
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="int_1.55" type="radio" name="radio2" value="int_1.55"/> Інтенсивні
+                                        тренування 5 разів на тиждень
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="int_1.65" type="radio" name="radio2" value="int_1.65"/> Інтенсивні
+                                        тренування щодня
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="int_1.725" type="radio" name="radio2" value="int_1.725"/> Інтенсивні
+                                        тренування до 2 разів на день
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="prof_1.9" type="radio" name="radio2" value="prof_1.9"/> Рівень
+                                        професійного атлета з надважкими тренуваннями
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
                         <center>
-                            <td class="include2" >
-                                <input id="button" type="button" name="result"  value="Result" onclick="func1()">
+                            <td class="include2">
+                                <input id="button" type="button" name="result" value="Обрахувати результат"
+                                       onclick="func1()">
                             </td>
                         </center>
                     </tr>
@@ -73,61 +143,130 @@
                 </table>
             </form>
         </center>
-        <div class="include2">
-            <div id="text_result"></div>
-        </div>
 
+    </div>
+    <center>
+        <div id="oneMore" class="include2"></div>
+    </center>
+
+    <div id="div" class="include2" style="display: none">
+        <center>
+            <input id="button2" type="button" name="result" value="    Подробиці   " onclick="func3()">
+        </center>
     </div>
 
 
+    <div id="form_result" style="display: none">
+        <center>
+            <form name="result">
+                <table>
+                    <tr>
+                        <td class="text2"> Ваша денна норма калорій
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="include2">
+                            <output id="result2" type="number"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text3"> Якщо ви бажаєте зберегти вагу, то кількість жирів
+                            білків та вуглеводів повинна бути наступною:
+                        </td>
+                        <td class="include3">
+                            <table>
+                                <tr>
+                                    <td> Жири -
+                                        <output id="fats_n" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Білки -
+                                        <output id="prot_n" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Вуглеводи -
+                                        <output id="carb_n" type="number"></output>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text2" style="margin-top: 40px"> Якщо ви бажаєте зменшити вагу,
+                            то вам варто вживати менше калорій:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="include2">
+                            <output id="result2_lose" type="number"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text3"> Кількість жирів білків та вуглеводів:</td>
+                        <td class="include3">
+                            <table>
+                                <tr>
+                                    <td> Жири -
+
+                                        <output id="fats_l" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Білки -
+                                        <output id="prot_l" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Вуглеводи -
+                                        <output id="carb_l" type="number"></output>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text2"> Якщо ви бажаєте набрати вагу вагу, то вам варто
+                            вживати більше калорій:
+                        </td>
+                        <tr>
+                        <td class="include2">
+                            <output id="result2_over" type="number"></output>
+                        </td>
+                </tr>
+                    </tr>
+                    <tr>
+                        <td class="text3"> Кількість жирів білків та вуглеводів:
+                        </td>
+                        <td class="include3">
+                            <table>
+                                <tr>
+                                    <td> Жири -
+                                    <output id="fats_o" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Білки -
+                                    <output id="prot_o" type="number"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Вуглеводи -
+                                    <output id="carb_o" type="number"></output>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </div>
 
 
 </div>
 
-
-
-<script>
-    function func_h_range() {
-        var H = parseInt(parameters.h.value);
-        height_number.value = H;
-        parameters.height.value = parameters.h.value;
-    }
-
-    function func_w_range() {
-        var W = parseInt(parameters.w.value);
-        weight_number.value = W;
-        parameters.weight.value = parameters.w.value;
-    }
-    function func1() {
-        var H = parseInt(parameters.height.value);
-        var W = parseInt(parameters.weight.value);
-        var R;
-
-        R = W/(H/100*H/100);
-        result.value = R;
-
-        if (R<18.5){
-            document.getElementById('text_result').innerHTML = 'Your current body mass index is less than normal.\n' +
-                'This means that you should in no way lose weight.';
-        }
-
-        if ( R > 18.5 && R < 25){
-            document.getElementById('text_result').innerHTML = 'Congratulations, you have a normal weight.';
-        }
-
-        if (R > 25) {
-            document.getElementById('text_result').innerHTML = 'Your weight is well above normal.\n' +
-                'We advise you to consult your doctor about possible health risks.';
-        }
-
-
-        else {
-            document.getElementById('text_result').innerHTML = 'Try to input your parameters one more time'
-        }
-
-    }
-
-</div>
 
 </body>
 </html>

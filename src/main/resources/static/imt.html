@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <title>Body mass index</title>
     <link rel="stylesheet" type="text/css" href="css/IMT_CSS.css">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
 </head>
 <body>
 <div id="main">
     <center>
         <div id="menu">
             <ul class="menu">
-                <li><a class="list" href="imt.html"> Body mass index </a></li>
-                <li><a class="list" href="kpfc.html"> KPFC index </a></li>
-                <li><a class="list" href="kcal.html"> Calories in foods </a></li>
+                <li><a class="list" href="imt.html"> Індекс маси тіла </a></li>
+                <li><a class="list" href="kpfc.html"> Норми КБЖВ  </a></li>
+                <li><a class="list" href="kcal.html"> Калораж в продуктах </a></li>
             </ul>
         </div>
     </center>
 
-    <p id="p_1">Calculate your Body Mass Index</p>
+    <p id="p_1">Підрахуйте індекс маси свого тіла</p>
 
     <p id="p_2">
-        Body Mass Index (BMI) is an indicator of your weight to height ratio. Use this handy tool to determine your BMI.
+        Індекс маси тіла (ІМТ) – це показник співвідношення вашої ваги до зросту.
+        Незважаючи на те, що показник ІМТ є загальноприйнятим і широко використовується
+        для оцінювання ваги, його не можна застосовувати до деяких груп населення,
+        таких як діти і вагітні жінки. Він також є непридатним для людей, які мають
+        більшу вагу через підвищене споживання рідини або більшу м’язеву масу та для
+        людей дуже низького зросту.
     </p>
 
 
@@ -29,7 +35,7 @@
             <form name="parameters" id="param">
                 <table>
                     <tr>
-                        <td class="numbers1"> Height (centimeters) </td>
+                        <td class="numbers1"> Зріст (сантиметри) </td>
                         <td class="include1">
                             <input id ="height_range" type="range" name="h" min="140" max="220" oninput="func_h_range()">
                         </td>
@@ -38,19 +44,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="numbers1"  style="margin-top: 35px"> Weight (kilograms) </td>
+                        <td class="numbers1"  style="margin-top: 35px"> Вага (кілограми) </td>
                         <td class="include1">
                             <input  id="weight_range" type="range" name="w" min="40" max="200" oninput="func_w_range()">
                         </td>
                         <td class="include1">
-                            <input id="weight_number" style="padding: 5px; font-size: 15px"
-                                   type="number" name="weight" min="40" max="200">
+                            <input id="weight_number" type="number" name="weight" min="40" max="200">
                         </td>
                     </tr>
                     <tr>
                         <center>
                         <td class="include2" >
-                            <input id="button" type="button" name="result"  value="Result" onclick="func1()">
+                            <input id="button" type="button" name="result"  value="Обрахувати результат" onclick="func1()">
                         </td>
                         </center>
                     </tr>
@@ -89,31 +94,32 @@
         weight_number.value = W;
         parameters.weight.value = parameters.w.value;
     }
+
     function func1() {
         var H = parseInt(parameters.height.value);
         var W = parseInt(parameters.weight.value);
         var R;
 
         R = W/(H/100*H/100);
-        result.value = R;
+        result.value = R.toFixed(1);
 
         if (R<18.5){
-        document.getElementById('text_result').innerHTML = 'Your current body mass index is less than normal.\n' +
-            'This means that you should in no way lose weight.';
+        document.getElementById('text_result').innerHTML = 'Індекс маси вашого тіла менше норми.\n' +
+            'Це означає, що вам ні в якому разі не можна худнути.';
+
         }
 
-        if ( R > 18.5 && R < 25){
-            document.getElementById('text_result').innerHTML = 'Congratulations, you have a normal weight.';
+        else if ( R > 18.5 && R < 25){
+            document.getElementById('text_result').innerHTML = 'Вітаємо, індекс маси вашого тіла в межах норми.';
         }
 
-        if (R > 25) {
-            document.getElementById('text_result').innerHTML = 'Your weight is well above normal.\n' +
-            'We advise you to consult your doctor about possible health risks.';
+        else if (R > 25) {
+            document.getElementById('text_result').innerHTML = 'Ваша вага перевищує норму.\n' +
+            'Ми радимо вам звернутись до лікаря, тому що можуть виникнути проблеми зіздоров\'ям.';
         }
-
 
         else {
-            document.getElementById('text_result').innerHTML = 'Try to input your parameters one more time'
+            document.getElementById('text_result').innerHTML = 'Спробуйте ввести ваші параметри ще раз.'
         }
 
     }
